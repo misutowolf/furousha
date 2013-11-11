@@ -7,7 +7,8 @@ A Vagrant setup for Rails development!
 1.  What is Furousha?
 2.  Prerequisites
 3.  Starting It Up
-4.  Guard::LiveReload Usage
+4.  Creating a Project
+5.  Guard::LiveReload Usage
 
 ### 1.  What is Furousha?
 
