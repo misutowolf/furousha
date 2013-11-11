@@ -45,9 +45,11 @@ Furousha includes the following:
 
 In order to get started with Furousha/Vagrant, you must have the following installed:
 
-* VirtualBox -- Vagrant's VMs are by default based on VirtualBox, as it works via VBoxManage.
-* Vagrant itself.
+* [VirtualBox](http://virtualbox.org) -- Vagrant's VMs are by default based on VirtualBox, as it works via VBoxManage.
+* [Vagrant](http://vagrantup.com) itself.
 * LiveReload plugin for your browser (if you plan to use Guard::LiveReload)
+
+Download links are at the end of this documentation.
 
 ### 3.  Starting up your environment.
 
@@ -93,3 +95,8 @@ After you've got the gem in your project, you must force polling when running Gu
     bundle exec guard --force-polling
 
 Port forwarding is already enabled for LiveReload's default port, so no additional steps should not be required.
+
+### 6.  Links/References
+
+* VirtualBox -- http://virtualbox.org
+* Vagrant -- http://vagrantup.com
