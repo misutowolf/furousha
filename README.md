@@ -48,6 +48,9 @@ In order to get started with Furousha/Vagrant, you must have the following insta
 * [VirtualBox](http://virtualbox.org) -- Vagrant's VMs are by default based on VirtualBox, as it works via VBoxManage.
 * [Vagrant](http://vagrantup.com) itself.
 * LiveReload plugin for your browser (if you plan to use Guard::LiveReload)
+  * Safari -- ([link](http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz))
+  * Chrome -- ([link](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei))
+  * Firefox -- ([link](http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi))
 
 Download links are at the end of this documentation.
 
@@ -95,8 +98,3 @@ After you've got the gem in your project, you must force polling when running Gu
     bundle exec guard --force-polling
 
 Port forwarding is already enabled for LiveReload's default port, so no additional steps should not be required.
-
-### 6.  Links/References
-
-* VirtualBox -- http://virtualbox.org
-* Vagrant -- http://vagrantup.com
