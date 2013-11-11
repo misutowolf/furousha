@@ -9,6 +9,7 @@ A Vagrant setup for Rails development!
 3.  Starting It Up
 4.  Creating a Project
 5.  Guard::LiveReload Usage
+6.  Screen!
 
 ### 1.  What is Furousha?
 
@@ -99,3 +100,22 @@ After you've got the gem in your project, you must force polling when running Gu
     bundle exec guard --force-polling
 
 Port forwarding is already enabled for LiveReload's default port, so no additional steps should not be required.
+
+### 6.  Screen!
+
+Due to the fact that you might want to run multiple things inside your Vagrant VM, I opted to add Screen as part of the provisioning process.
+
+Using it for your project might go something like this:
+
+    cd <project folder>
+    screen -S rails
+    inside screen> rails s
+    <Ctrl-A, D> (Detach)
+    screen -S guard
+    inside screen> bundle exec guard --force-polling
+    <Ctrl-A, D> (Detach again)
+    screen -S mailcatcher
+    mailcatcher
+    <Ctrl-A, D>
+
+This way, you can keep Guard and your Rails server running in the background, and still be able to do things inside the Vagrant SSH.  Screen is awesome.
