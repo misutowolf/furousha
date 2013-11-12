@@ -11,6 +11,7 @@ A Vagrant setup for Rails development!
 5.  Guard::LiveReload Usage
 6.  MailCatcher
 7.  Screen!
+8.  Thanks, etc.
 
 ### 1.  What is Furousha?
 
@@ -119,6 +120,10 @@ additional steps should not be required.
 
 ### 6.  MailCatcher
 
+First, you'll want to add MailCatcher to your Rails project Gemfile:
+
+    gem 'mailcatcher'
+
 It seems that there's also an issue with MailCatcher, when it comes to being 
 able to access the web interface from outside the virtual machine.
 
@@ -156,3 +161,11 @@ You can access the screen sessions by using the following commands:
     screen -r <rails, guard, or mailcatcher>
 
 Then freely detach from a session using `<Ctrl-A, D>`
+
+### 8.  Thanks, etc.
+
+Thanks to the guys in #vagrant, #puppet, #rubyonrails, and #ruby for getting all
+of this stuff working...I had various issues that needed sorting out.
+
+Also, thanks to Craig for showing me Vagrant.  It's the perfect solution for the 
+"problem" that needed solving.
