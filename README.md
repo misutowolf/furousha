@@ -9,7 +9,8 @@ A Vagrant setup for Rails development!
 3.  Starting It Up
 4.  Creating a Project
 5.  Guard::LiveReload Usage
-6.  Screen!
+6.  MailCatcher
+7.  Screen!
 
 ### 1.  What is Furousha?
 
