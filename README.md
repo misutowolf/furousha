@@ -8,10 +8,11 @@ A Vagrant setup for Rails development!
 2.  Prerequisites
 3.  Starting It Up
 4.  Creating a Project
-5.  Guard::LiveReload Usage
-6.  MailCatcher
-7.  Screen!
-8.  Thanks, etc.
+5.  Using Git with your Rails project
+6.  Guard::LiveReload Usage
+7.  MailCatcher
+8.  Screen!
+9.  Thanks, etc.
 
 ### 1.  What is Furousha?
 
@@ -94,7 +95,35 @@ This will create a new Rails project in the default Vagrant synced folder,
 any editor you want, whether it be oustide the VM (in Windows), or inside 
 (vim/nano/etc.)
 
-### 5.  Guard::LiveReload
+### 5.  Using Git with your Rails project
+
+There are a few options available when it comes to the usage of Git to handle
+your brand new Rails project.
+
+First, you could just switch the Git remote URI using `git remote set-url`:
+
+    git remote set-url origin <Repository URL here>
+
+Then set your URL as the master upstream, allowing you to just use `git push`:
+
+    git branch -u origin/master
+
+Alternatively, you could SSH into your Vagrant VM, and use Git inside the VM:
+
+    vagrant ssh
+    cd /vagrant/<project folder>
+    git init
+    git remote add origin <URL here>
+    git branch -u origin/master
+    git add -A
+    git commit -m "First commit!"
+    git push
+
+Personally, I'd go with the former...as it takes advantage of Vagrant itself,
+allowing other users access to the EXACT environment in which your project
+is contained.   That's the whole point of Vagrant, after all.
+
+### 6.  Guard::LiveReload
 
 The gem for LiveReload comes pre-installed with this setup.  However, due to a 
 bug with Guard, invoking Guard with your Rails project in typical fashion 
@@ -118,7 +147,7 @@ Guard, after adding proper lines to your Guardfile:
 Port forwarding is already enabled for LiveReload's default port, so no 
 additional steps should not be required.
 
-### 6.  MailCatcher
+### 7.  MailCatcher
 
 First, you'll want to add MailCatcher to your Rails project Gemfile:
 
@@ -135,7 +164,7 @@ This will allow you to access the web interface at the following address:
 
     http://localhost:1080
 
-### 7.  Screen!
+### 8.  Screen!
 
 Due to the fact that you might want to run multiple things inside your Vagrant 
 VM, I opted to add Screen as part of the provisioning process.
@@ -162,7 +191,7 @@ You can access the screen sessions by using the following commands:
 
 Then freely detach from a session using `<Ctrl-A, D>`
 
-### 8.  Thanks, etc.
+### 9.  Thanks, etc.
 
 Thanks to the guys in #vagrant, #puppet, #rubyonrails, and #ruby for getting all
 of this stuff working...I had various issues that needed sorting out.
