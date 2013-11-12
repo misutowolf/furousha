@@ -144,7 +144,7 @@ Using it for your project might go something like this:
     inside screen> bundle exec guard --force-polling
     <Ctrl-A, D> (Detach again)
     screen -S mailcatcher
-    mailcatcher
+    bundle exec mailcatcher --http-ip 0.0.0.0
     <Ctrl-A, D>
 
 This way, you can keep Guard and your Rails server running in the background, 
