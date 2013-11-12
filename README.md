@@ -154,4 +154,4 @@ You can access the screen sessions by using the following commands:
 
     screen -r <rails, guard, or mailcatcher>
 
-Then freely detach from a session using <code><Ctrl-A, D></code>
+Then freely detach from a session using `<Ctrl-A, D>`
