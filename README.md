@@ -149,12 +149,20 @@ additional steps should not be required.
 
 ### 7.  MailCatcher
 
-First, you'll want to add MailCatcher to your Rails project Gemfile:
+MailCatcher is a tiny Ruby-driven SMTP server which catches mail and displays
+it in a browser for the user to see.   It's a great way to test mail-sending
+functionality from your projects without having to use a true mail server.
 
-    gem 'mailcatcher'
+In order to use it with Rails, the following lines must be added to your site's
+`config/environments/development.rb`:
 
-It seems that there's also an issue with MailCatcher, when it comes to being 
-able to access the web interface from outside the virtual machine.
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+
+This will tell the Rails development server to send all mail through MailCatcher.
+
+It seems that there's an issue with MailCatcher, when it comes to being able to 
+access the web interface from outside the virtual machine.
 
 Therefore, you have to invoke it in the following way:
 
