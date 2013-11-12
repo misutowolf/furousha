@@ -149,3 +149,9 @@ Using it for your project might go something like this:
 
 This way, you can keep Guard and your Rails server running in the background, 
 and still be able to do things inside the Vagrant SSH.  Screen is awesome!
+
+You can access the screen sessions by using the following commands:
+
+    screen -r <rails, guard, or mailcatcher>
+
+Then freely detach from a session using <code><Ctrl-A, D></code>
